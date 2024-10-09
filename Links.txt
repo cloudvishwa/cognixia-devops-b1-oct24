@@ -3,3 +3,4 @@ https://download.virtualbox.org/virtualbox/7.1.2/VirtualBox-7.1.2-164945-Win.exe
 https://code.visualstudio.com/download#
 https://code.visualstudio.com/sha/download?build=stable&os=win32-arm64-user
 https://git-scm.com/download/win
+https://releases.ubuntu.com/jammy/ubuntu-22.04.5-desktop-amd64.iso
