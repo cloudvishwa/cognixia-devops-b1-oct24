@@ -6,3 +6,9 @@ https://code.visualstudio.com/sha/download?build=stable&os=win32-arm64-user
 https://git-scm.com/download/win
 https://releases.ubuntu.com/jammy/ubuntu-22.04.5-desktop-amd64.iso
 =====================================
+
+
+D4  -- link to the assessments 
+
+https://drive.google.com/drive/folders/1EPf_SF2KXZ4A4vwe5sAwpMtVgoSFWS7J?usp=drive_link
+
