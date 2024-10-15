@@ -13,7 +13,7 @@ You are tasked with managing file and directory permissions for a shared project
 
 **Tasks:**
 1. Create a directory `/home/project/`.
-2. Set the directory so that only the owner (you) and group members can read and write files in the directory, while others have no access.
+2. Set the directory so that only the owner (you) and group members can read  write and execute files in the directory, while others have no access.
 3. Change the permissions of a file `secret.txt` inside `/home/project/` so that only you, the owner, have read/write access.
 
 **Commands:**
