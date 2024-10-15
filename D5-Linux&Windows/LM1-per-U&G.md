@@ -149,6 +149,19 @@ You need to temporarily disable a user's account due to inactivity or a security
 **Commands:**
 ```bash
 sudo usermod -L alice    # Lock the user
+
+sudo passwd -S alice # check if the user is locked 
+```
+**Output:**
+username L 08/12/2024 0 99999 7 -1 (Password locked.)
+
+1. If the second field is L, it means the account is locked.
+2. If the second field is P, it means the account is unlocked and active.
+3. If the second field is NP, it means the account does not have a password set.
+
+to unlock the user
+
+```
 sudo usermod -U alice    # Unlock the user
 ```
 Exit from the root user 
