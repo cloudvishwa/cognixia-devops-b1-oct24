@@ -143,14 +143,21 @@ sudo chage -l alice       # List password aging information
 You need to temporarily disable a user's account due to inactivity or a security issue, and later unlock it when needed.
 
 **Tasks:**
-1. Lock the user `bob`.
-2. Unlock the user `bob` when required.
+1. Lock the user `alice`.
+2. Unlock the user `alice` when required.
 
 **Commands:**
 ```bash
-sudo usermod -L bob    # Lock the user
-sudo usermod -U bob    # Unlock the user
+sudo usermod -L alice    # Lock the user
+sudo usermod -U alice    # Unlock the user
 ```
+Exit from the root user 
+Now login as another normal users ( for example user1 on your VM)
+**Commands:**
+```bash
+su - alice    # Switch the user , enter the pwd 
+pwd # this should show the path of the user
+``` 
 
 **Do's:**
 - Use account locking when users are on leave or pose a security risk.
@@ -179,6 +186,12 @@ You want to display a custom message each time users log in to the system.
    Welcome to the project system!
    ```
 3. Save the file.
+
+4. ssh to the localhost to check if the mssg is printed.
+   ```bash
+   ssh alice@localhost
+   ```
+   You shouwl see the message 
 
 **Do's:**
 - Use `/etc/motd` for system-wide messages visible at login.
