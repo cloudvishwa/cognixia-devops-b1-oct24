@@ -1,0 +1,57 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "vnetAddressPrefix": {
+        "type": "string",
+        "defaultValue": "10.0.0.0/20",
+        "metadata": {
+          "description": "The address prefix for the Virtual Network"
+        }
+      },
+      "subnetAddressPrefix1": {
+        "type": "string",
+        "defaultValue": "10.0.1.0/24",
+        "metadata": {
+          "description": "The address prefix for the Subnet"
+        }
+      },
+      "subnetAddressPrefix2": {
+        "type": "string",
+        "defaultValue": "10.0.2.0/24",
+        "metadata": {
+          "description": "The address prefix for the Subnet"
+         }
+      }
+    },
+    "resources": [
+      {
+        "type": "Microsoft.Network/virtualNetworks",
+        "apiVersion": "2020-06-01",
+        "location": "[resourceGroup().location]",
+        "name": "myVnet",
+        "properties": {
+          "addressSpace": {
+            "addressPrefixes": [
+              "[parameters('vnetAddressPrefix')]"
+            ]
+          },
+          "subnets": [
+            {
+              "name": "mySubnet1",
+              "properties": {
+                "addressPrefix": "[parameters('subnetAddressPrefix1)]"
+              }
+            },
+            {
+                "name": "mySubnet2",
+                "properties": {
+                  "addressPrefix": "[parameters('subnetAddressPrefix2)]"
+                }
+            }
+          ]
+        }
+      }
+    ]
+  }
+  

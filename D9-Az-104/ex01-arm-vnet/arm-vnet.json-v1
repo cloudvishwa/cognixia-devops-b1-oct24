@@ -1,0 +1,34 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "resources": [
+      {
+        "type": "Microsoft.Network/virtualNetworks",
+        "apiVersion": "2020-06-01",
+        "location": "[resourceGroup().location]",
+        "name": "myVnet",
+        "properties": {
+          "addressSpace": {
+            "addressPrefixes": [
+              "10.0.0.0/20"
+            ]
+          },
+          "subnets": [
+            {
+              "name": "mySubnet1",
+              "properties": {
+                "addressPrefix": "10.0.1.0/24"
+              }
+            },
+            {
+                "name": "mySubnet2",
+                "properties": {
+                  "addressPrefix": "10.0.2.0/24"
+                }
+            }
+          ]
+        }
+      }
+    ]
+  }
+  
