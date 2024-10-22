@@ -40,13 +40,13 @@
             {
               "name": "mySubnet1",
               "properties": {
-                "addressPrefix": "[parameters('subnetAddressPrefix1)]"
+                "addressPrefix": "[parameters('subnetAddressPrefix1')]"
               }
             },
             {
                 "name": "mySubnet2",
                 "properties": {
-                  "addressPrefix": "[parameters('subnetAddressPrefix2)]"
+                  "addressPrefix": "[parameters('subnetAddressPrefix2')]"
                 }
             }
           ]
