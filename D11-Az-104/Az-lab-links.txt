@@ -1,0 +1,2 @@
+Lab 07 - Manage Azure Storage
+https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_07-Manage_Azure_Storage.html

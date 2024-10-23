@@ -1,3 +1,5 @@
 
 Lab 06: Manage Virtual Machines
 https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_08-Manage_Virtual_Machines.html
+
+
