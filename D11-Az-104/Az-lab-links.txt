@@ -1,2 +1,31 @@
 Lab 07 - Manage Azure Storage
 https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_07-Manage_Azure_Storage.html
+
+7. Lab Scenario: Managing Azure Storage
+Lab Objectives: In this lab, you will explore how to manage Azure Storage effectively, with hands-on tasks to evaluate and implement key features like blob storage management, file shares, and security. The lab helps you understand Azure's cost optimization strategies for less frequently accessed data and explores protection mechanisms for ensuring secure and compliant data storage.
+
+Task 1: Provision the Lab Environment:
+
+Set up and configure Azure Storage accounts.
+Evaluate different storage tiers (hot, cool, archive) for cost efficiency based on access patterns.
+Task 2: Create and Configure Azure Storage Accounts:
+
+Create a general-purpose v2 storage account.
+Configure settings such as redundancy (LRS, GRS) and networking (VNet integration, firewall rules).
+Task 3: Manage Blob Storage:
+
+Upload blobs and set Blob Lifecycle Management rules to automate transitioning blobs to cooler storage tiers or deleting them after a specific period.
+Experiment with different blob types (Block, Append, Page).
+Task 4: Manage Authentication and Authorization:
+
+Use Azure AD to control access to storage accounts.
+Generate Shared Access Signatures (SAS) for temporary and secure access to blobs and file shares.
+Task 5: Create and Configure Azure File Shares:
+
+Create a file share in Azure Files and explore snapshot capabilities for data protection.
+Implement Azure File Sync to sync an on-premises file server with the Azure File share.
+Task 6: Manage Network Access for Azure Storage:
+
+Secure your storage account by setting up private endpoints and configuring firewalls to limit access only to specific IP addresses or virtual networks.
+
+=====================================

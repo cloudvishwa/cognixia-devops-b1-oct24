@@ -2,4 +2,12 @@
 Lab 06: Manage Virtual Machines
 https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_08-Manage_Virtual_Machines.html
 
+Key Lab Objectives:
+Task 1: Deploy zone-resilient VMs in the Azure portal and using ARM templates to ensure high availability across multiple availability zones.
+Task 2: Configure VMs using VM extensions to automate tasks such as installing applications (e.g., IIS).
+Task 3: Scale compute and storage for Azure VMs.
+Task 4: Deploy and configure zone-resilient VM scale sets.
+Task 5: Use extensions to further automate scale sets.
+Task 6: Scale compute and storage for VM scale sets.
 
+=============================================

@@ -14,3 +14,7 @@ https://forms.gle/3SyqbSfaa1Z6o8bd6
 Assessment-4 -- 
 Az-104 -- Admin-Virtual-Network & Intersite connectivity
 https://forms.gle/5Rzg3tVHDR672go79
+
+
+Assessment-5 -- 
+Az-104 -- Manage_Virtual_Machines & Storage account 
