@@ -9,12 +9,13 @@ https://forms.gle/wGCrV3gZAQkmYog96
 
 Assessment-3 -- 
 Linux-Basic-part2
-https://forms.gle/3SyqbSfaa1Z6o8bd6 
+https://forms.gle/3SyqbSfaa1Z6o8bd6 -- 16-Oct-24
 
 Assessment-4 -- 
 Az-104 -- Admin-Virtual-Network & Intersite connectivity
-https://forms.gle/5Rzg3tVHDR672go79
+https://forms.gle/5Rzg3tVHDR672go79 -- 23-oct-24
 
 
 Assessment-5 -- 
 Az-104 -- Manage_Virtual_Machines & Storage account 
+https://forms.gle/zLdmEPWj3X6MAmFRA -- 24-Oct-24
