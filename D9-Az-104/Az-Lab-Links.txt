@@ -3,5 +3,35 @@ Lab 04: Implement Virtual Networking
 https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_04-Implement_Virtual_Networking.html
 
 
+Task Summary for "Implement Virtual Networking" Lab
+Job Skills
+
+Task 1: Create a virtual network with subnets using the portal.
+Task 2: Use a template to provision a virtual network with subnets.
+Task 3: Configure communication between an Application Security Group (ASG) and a Network Security Group (NSG).
+Task 4: Set up public and private Azure DNS zones.
+Task 1: Create a virtual network with subnets using the portal
+Provision a CoreServicesVnet with subnets to support existing resources and future growth.
+
+Task 2: Use a template to provision a virtual network with subnets
+Modify and deploy a template to create a ManufacturingVnet with custom subnets for anticipated growth in manufacturing.
+
+Task 3: Configure communication between ASG and NSG
+Create an ASG and an NSG, setting rules to allow traffic from the ASG and blocking internet access.
+
+Task 4: Set up Azure DNS zones
+Configure DNS zones, including a public DNS zone for a domain and a private DNS zone for internal name resolution.
+
+
 Lab 05: Implement Intersite Connectivity
 https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_05-Implement_Intersite_Connectivity.html
+
+Task Summary for "Implement Intersite Connectivity" Lab
+Job Skills
+
+Task 1: Create a virtual network and a core services virtual machine.
+Task 2: Create a manufacturing virtual network and virtual machine.
+Task 3: Test connectivity with Azure Network Watcher.
+Task 4: Set up virtual network peering between networks.
+Task 5: Use PowerShell to verify connectivity between VMs.
+Task 6: Create a custom route for controlled network traffic.

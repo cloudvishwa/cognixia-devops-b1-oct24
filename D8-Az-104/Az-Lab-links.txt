@@ -2,12 +2,33 @@
 Lab 02a: Manage Subscriptions and RBAC
 https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_02a_Manage_Subscriptions_and_RBAC_Entra.html
 
+The "Manage Subscriptions and RBAC" lab includes these main tasks:
+
+    Organize Subscriptions: Establish management groups and apply them to organize multiple subscriptions.
+    Assign Built-In Roles: Use RBAC to assign built-in roles like Reader or Contributor to specific users and groups.
+    Create a Custom Role: Define a role with specific permissions to fulfill custom access requirements.
+    Monitor Role Assignments: Use Activity Log to track role assignments and identify any access-related events.
 
 Lab 02b: Manage Governance via Azure Policy
 https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_02b-Manage_Governance_via_Azure_Policy.html
 
+The "Manage Governance via Azure Policy" lab includes four main tasks:
+
+1. **Assign Tags**: Add tags to resource groups to improve resource management and reporting.
+2. **Enforce Tagging with Policy**: Use Azure Policy to require specific tags on new resources.
+3. **Apply Tagging with Policy**: Inherit tags from parent resource groups, using a policy with remediation.
+4. **Configure Resource Locks**: Set up locks to prevent accidental modifications or deletions.
+
 
 Lab 03: Manage Azure resources by using Azure Resource Manager Templates
 https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_03b-Manage_Azure_Resources_by_Using_ARM_Templates.html
+
+The "Manage Azure Resources by Using ARM Templates" lab includes these tasks:
+
+1. **Create and Export a Template**: Set up a managed disk and export its ARM template.
+2. **Edit and Redeploy Template**: Modify and redeploy the template for additional disks.
+3. **Deploy via PowerShell in Cloud Shell**: Configure Cloud Shell and deploy using PowerShell.
+4. **Deploy via CLI**: Use CLI in Cloud Shell for template deployment.
+5. **Deploy with Bicep**: Implement a managed disk using a Bicep template.
 
 

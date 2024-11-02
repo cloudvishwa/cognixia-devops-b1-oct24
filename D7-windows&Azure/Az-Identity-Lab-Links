@@ -1,3 +1,12 @@
-
+Lab 01: Admin Identity
 https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_01-Manage_Entra_ID_Identities.html
+
+
+The key objectives of the "Manage Microsoft Entra ID Identities" lab include:
+
+1. Creating and managing user accounts within Microsoft Entra ID.
+2. Inviting external users to the directory.
+3. Setting up and managing security groups.
+4. Configuring both static and dynamic group memberships.
+5. Understanding identity management and access control in Azure.
 
