@@ -1,0 +1,26 @@
+Lab 09a: Implement Web Apps
+https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_09a-Implement_Web_Apps.html
+
+1. Create and configure an Azure web app**: Set up a web application using Azure App Services, selecting appropriate runtime stacks and configurations.
+
+2. Create and configure a deployment slot**: Establish a staging environment to test changes before deploying them to production.
+
+3. Configure web app deployment settings**: Set up continuous deployment options to ensure the web app is updated with the latest code versions.
+
+4. Swap deployment slots**: Exchange the staging slot with the production slot to promote tested changes to the live environment.
+
+5. Configure and test autoscaling of the Azure web app**: Implement and verify autoscaling settings to handle varying traffic loads efficiently.
+
+These tasks guide you through deploying, managing, and scaling web applications using Azure App Services. 
+
+
+==============================================
+*** To be done after the Docker Topic***
+
+Lab 09b: Implement Azure Container Instances
+https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_09b-Implement_Azure_Container_Instances.html
+
+Lab 09c: Implement Azure Container Apps
+https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_09c-Implement-Azure-Container-Apps.html
+
+

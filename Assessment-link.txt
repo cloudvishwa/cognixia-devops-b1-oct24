@@ -19,3 +19,8 @@ https://forms.gle/5Rzg3tVHDR672go79 -- 23-oct-24
 Assessment-5 -- 
 Az-104 -- Manage_Virtual_Machines & Storage account 
 https://forms.gle/zLdmEPWj3X6MAmFRA -- 24-Oct-24
+
+
+Assessment-6 -- 
+Az104 -- UDR -- ALB , Network Wachers, powershell, 
+https://forms.gle/zHRVAWSYXhhaz14SA -- 4-Nov-24
