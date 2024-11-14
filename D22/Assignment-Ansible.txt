@@ -1,0 +1,3 @@
+Create Playbook for installing tomcat 9 on the Rocky Linux or ubuntu 
+and copy the .jar or the war file created previously to that server
+
