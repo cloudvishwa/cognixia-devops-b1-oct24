@@ -1,0 +1,12 @@
+## Task1
+* Add 5 GB storage to the jenkins VM, format it , map it to new folder called .. /mnt/jenkins
+* move/copy all the files and folders form /var/lib/jenkins/ to /mnt/jenkins/
+* edit the jenkins config file , and change the home directory of jenkins
+* restart jenkins 
+
+* /mnt/az-agent/
+
+Checking command
+df -h 
+
+
