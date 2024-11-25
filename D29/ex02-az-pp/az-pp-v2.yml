@@ -1,0 +1,35 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+- stage: Build_Docker  
+  
+  jobs:
+  - job: Build_Docker 
+    displayName: Build_Docker
+    steps:
+    - script: echo "stage1 , job1"
+  - job: Run_Docker 
+    displayName: Run_Docker
+    steps:
+    - script: echo "stage1 , job2"
+- stage: Test_docker  
+  dependsOn: Build_Docker
+  jobs:
+  - job: Test_docker 
+    displayName: Test_docker
+    steps:
+    - script: echo "stage2 , job1"
+  - job: Test_website 
+    dependsOn: Test_docker
+    displayName: Test_website
+    steps:
+    - script: echo "stage2 , job2"
