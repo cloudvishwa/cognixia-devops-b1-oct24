@@ -1,0 +1,48 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+- stage: Build_Docker  
+  
+  jobs:
+  - job: git_clone 
+    displayName: git_clone
+    steps:
+    - checkout: self 
+      
+  - job: Dockerbuild 
+    dependsOn: git_clone
+    displayName: Dockerbuild
+    steps:
+    - script: | 
+        docker --version
+        docker build . -t custhttp:v1
+        docker image ls 
+
+- stage: Run_Docker  
+  dependsOn: Build_Docker
+  jobs:
+  - job: DockerRun 
+    displayName: DockerRun
+    steps:
+    - script: | 
+        docker --version
+        docker run -d -p 80:80 custhttp:v1
+        docker ps 
+
+- stage: Test_Docker  
+  dependsOn: Run_Docker 
+  jobs:
+  - job: Test_Docker 
+    displayName: Test_Docker
+    steps:
+    - script: | 
+        curl localhost:80
