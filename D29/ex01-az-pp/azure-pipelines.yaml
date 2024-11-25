@@ -1,0 +1,15 @@
+trigger:
+- main # The branch that triggers the pipeline
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+
+steps:
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      ls -l 
+      echo 'Hello world'
