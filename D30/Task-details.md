@@ -20,4 +20,4 @@
 * create the subnet name as below format in terraform automatically
 "<projname>-<env>-<sub>-<integer starting for 1>"
 example -- proj1-sub-1
-input: projectname  and env
+input: projectname  and env 
