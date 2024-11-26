@@ -1,0 +1,10 @@
+- name: Set dynamic facts
+  hosts: localhost
+  tasks:
+    - name: Set a dynamic fact
+      set_fact:
+        dynamic_fact: "{{ 10 + 20 }}"
+
+    - name: Display the dynamic fact
+      debug:
+        msg: "The result of the dynamic calculation is: {{ dynamic_fact }}"

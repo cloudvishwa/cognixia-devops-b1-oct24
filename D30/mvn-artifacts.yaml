@@ -1,0 +1,49 @@
+trigger:
+  none
+pool:
+  vmImage: 'ubuntu-latest'
+
+stages:
+- stage: Build
+  displayName: Build and Publish Maven Artifacts
+  jobs:
+  - job: BuildJob
+    displayName: Build the Maven Project
+    steps:
+    - task: Maven@3
+      inputs:
+        mavenPomFile: 'pom.xml'
+        goals: 'clean package'
+        options: '-DskipTests=true'
+        publishJUnitResults: true
+        javaHomeOption: 'JDKVersion'
+        jdkVersionOption: '1.8'
+        mavenVersionOption: 'Default'
+        mavenAuthenticateFeed: false
+        effectivePomSkip: false
+      displayName: Build Project with Maven
+
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: '$(System.DefaultWorkingDirectory)/target'
+        artifact: 'maven_artifact'
+        publishLocation: 'pipeline'
+
+
+- stage: Deploy
+  displayName: Deploy Application
+  dependsOn: Build
+  jobs:
+  - job: DeployJob
+    displayName: Deploy the Maven Artifact
+    steps:
+    - task: DownloadPipelineArtifact@2
+      inputs:
+        buildType: 'current'
+        artifactName: 'maven_artifact'
+        targetPath: '$(System.DefaultWorkingDirectory)/downloaded_maven_artifact'
+
+    - script: |
+        echo "Deploying the Maven artifact..."
+        ls $(System.DefaultWorkingDirectory)/downloaded_maven_artifact
+      displayName: Use the Maven Artifact
