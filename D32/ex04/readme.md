@@ -1,34 +1,17 @@
 ## how to build and push the docker image using azure pipeline 
 
+* Create ACR 
+* Enable admin via the accesskeys
+* login to acr from your vm , 
+``` 
+docker login <login sever>
+username
+password
 ```
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-pool:
-  vmImage: ubuntu-latest
-
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-- task: Docker@2
-  inputs:
-    containerRegistry: 'acr-cred'
-    repository: 'pythonapp'
-    command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
-
-- task: AzureCLI@2
-  inputs:
-    azureSubscription: 'fullaccessportal'
-    scriptType: 'bash'
-    scriptLocation: 'inlineScript'
-    inlineScript: |
-      echo "Deleting Docker image..."
-      az acr repository delete --name vishwa28nov24  --repository pythonapp --tag $(Build.BuildId)-1 --yes
+* create the docker tag for this new repo
+``` 
+docker tag old iamge;v1 to vishwa28nov24.azurecr.io/pythonapp:v1
 ```
+Then do docker push
+
+* then create the azure pipeline
