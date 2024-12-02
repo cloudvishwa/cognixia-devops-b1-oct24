@@ -10,7 +10,7 @@
       - Ensure extensions for Azure, Docker, and Git are installed.
 - **Azure Resource Setup**:
   - Create a Storage Account and Container to store the Terraform state file and other project-related data.
-  - Create a Resource Group (RG), Virtual Network (VNet), and Subnet.
+  - Create a Resource Group (RG), Virtual Network (VNet), and Subnet ( 2 ).
 
 ## Environment Setup
 - **Terraform Setup**:
