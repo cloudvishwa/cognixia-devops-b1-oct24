@@ -1,0 +1,20 @@
+- stage: Deploy_AKS
+  jobs:
+  - job: DeployAKS
+    displayName: Deploy AKS and Download Kubeconfig
+    steps:
+    # Azure CLI task to download kubeconfig
+    - task: AzureCLI@2
+      displayName: "Download AKS kubeconfig"
+      inputs:
+        azureSubscription: "fullaccessaz"
+        scriptType: bash
+        scriptLocation: inlineScript
+        inlineScript: |
+          # Set variables
+          RESOURCE_GROUP="rg-viswa"
+          CLUSTER_NAME="aks-vishwa"
+
+          # Download kubeconfig
+          az aks get-credentials --resource-group $RESOURCE_GROUP --name $CLUSTER_NAME  --overwrite-existing
+          echo "Kubeconfig downloaded"

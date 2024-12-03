@@ -1,0 +1,93 @@
+# Deploy to Azure Kubernetes Service
+# Build and push image to Azure Container Registry; Deploy to Azure Kubernetes Service
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+trigger:
+- main
+
+resources:
+- repo: self
+
+variables:
+
+  # Container registry service connection established during pipeline creation
+  dockerRegistryServiceConnection: 'a5a606f8-ac3a-4865-9d83-8b0068db5569'
+  imageRepository: 'pythonapp'
+  containerRegistry: 'vishwa28nov24.azurecr.io'
+  dockerfilePath: '**/Dockerfile'
+  tag: '$(Build.BuildId)'
+  imagePullSecret: 'vishwa28nov24d472-auth'
+
+  # Agent VM image name
+  vmImageName: 'ubuntu-latest'
+
+
+stages:
+- stage: Build
+  displayName: Build stage
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: $(vmImageName)
+    steps:
+    # - task: Docker@2
+    #   displayName: Build and push an image to container registry
+    #   inputs:
+    #     command: buildAndPush
+    #     repository: $(imageRepository)
+    #     dockerfile: $(dockerfilePath)
+    #     containerRegistry: $(dockerRegistryServiceConnection)
+    #     tags: |
+    #       $(tag)
+
+    - script: |
+        ls -l $(System.DefaultWorkingDirectory) | grep yaml 
+        cat $(System.DefaultWorkingDirectory)/deployment.yaml
+        mkdir $(System.DefaultWorkingDirectory)/yaml-files
+        cp $(System.DefaultWorkingDirectory)/deployment.yaml $(System.DefaultWorkingDirectory)/yaml-files/
+        cp $(System.DefaultWorkingDirectory)/service.yaml $(System.DefaultWorkingDirectory)/yaml-files/
+
+
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: '$(System.DefaultWorkingDirectory)/yaml-files'
+        # '$(System.DefaultWorkingDirectory)/service.yaml'  # The directory containing your YAML files
+        artifactName: 'YAMLFiles'        # Name of the artifact
+        publishLocation: 'pipeline'
+
+    # - upload: manifests
+    #   artifact: manifests
+
+- stage: Deploy
+  displayName: Deploy stage
+  dependsOn: Build
+
+  jobs:
+  - deployment: Deploy
+    displayName: Deploy
+    pool:
+      vmImage: $(vmImageName)
+    environment: 'ascproj2.dev-c1'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: KubernetesManifest@0
+            displayName: Create imagePullSecret
+            inputs:
+              action: createSecret
+              secretName: $(imagePullSecret)
+              dockerRegistryEndpoint: $(dockerRegistryServiceConnection)
+
+          - task: KubernetesManifest@0
+            displayName: Deploy to Kubernetes cluster
+            inputs:
+              action: deploy
+              manifests: |
+                $(Pipeline.Workspace)/YAMLFiles/deployment.yaml
+                $(Pipeline.Workspace)/YAMLFiles/service.yaml
+              imagePullSecrets: |
+                $(imagePullSecret)
+              containers: |
+                $(containerRegistry)/$(imageRepository):$(tag)
